@@ -1,10 +1,8 @@
-import { Asciidoc } from '@friends-library/types';
-
-export function quotify(adoc: Asciidoc): Asciidoc {
+export function quotify(adoc: string): string {
   return adoc.split(`\n`).map(quotifyLine).join(`\n`);
 }
 
-export function quotifyLine(line: Asciidoc): Asciidoc {
+export function quotifyLine(line: string): string {
   if (line === `'''`) {
     return line;
   }
